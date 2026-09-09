@@ -11,7 +11,7 @@ object VideoExporter {
     data class Result(val file:File,val duration:Double)
     private fun q(path:String)="'${path.replace("'", "'\\''")}'"
 
-    fun render(context:Context,p:QuizProject,onProgress:(Int,String)->Unit={}):Result {
+    fun render(context:Context,p:QuizProject,onProgress:(Int,String)->Unit = { _, _ -> }):Result {
         val valid=p.questions.filter{it.flagUri.isNotBlank() && it.answers.take(p.answerCount).any(String::isNotBlank)}
         require(valid.isNotEmpty()){"Brak kompletnych pytań."}
         val work=File(context.cacheDir,"render_${System.currentTimeMillis()}").apply{mkdirs()}
