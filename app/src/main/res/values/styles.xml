@@ -1,0 +1,11 @@
+<resources>
+    <style name="Theme.QuizVideoStudio" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#D6A83D</item>
+        <item name="colorPrimaryVariant">#A77B20</item>
+        <item name="colorOnPrimary">#10131A</item>
+        <item name="android:fontFamily">sans</item>
+        <item name="android:navigationBarColor">#11141C</item>
+        <item name="android:statusBarColor">#11141C</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>
